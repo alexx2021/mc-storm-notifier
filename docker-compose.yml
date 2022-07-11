@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  scraper:
+    build: 
+      context: .
+    volumes:
+      - ./reports:/dev/shm
+    environment:
+      - DISCORD_TOKEN_MCSN=
+      - REPEAT_TIME=10.0
+    ports:
+      - 6123:6123
+      - 56753:56753
